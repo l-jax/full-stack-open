@@ -1,7 +1,7 @@
 ```mermaid
 
     sequenceDiagram
-        browser->>server: HTTP-POST https://studies.cs.helsinki.fi/exampleapp/new_note
+        browser->>server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
         Note right of browser: Browser sends form data payload "note: apple"
         server-->>browser: HTTP status code 302
                 Note left of server: Server saves form data and asks browser to reload page
