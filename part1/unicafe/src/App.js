@@ -18,12 +18,16 @@ const Statistics = ({statistics}) => {
   return (
     <div>
       <h1>statistics</h1>
-      <StatisticLine name='good' value={statistics.good} />
-      <StatisticLine name='neutral' value={statistics.neutral} />
-      <StatisticLine name='bad' value={statistics.bad} />
-      <StatisticLine name='all' value={statistics.all} />
-      <StatisticLine name='average' value={statistics.average} />
-      <StatisticLine name='positive' value={statistics.positive} />
+      <table>
+        <tbody>
+        <StatisticLine name='good' value={statistics.good} />
+        <StatisticLine name='neutral' value={statistics.neutral} />
+        <StatisticLine name='bad' value={statistics.bad} />
+        <StatisticLine name='all' value={statistics.all} />
+        <StatisticLine name='average' value={statistics.average} />
+        <StatisticLine name='positive' value={statistics.positive} />
+        </tbody>
+      </table>
     </div>
   )
 }
@@ -31,9 +35,10 @@ const Statistics = ({statistics}) => {
 
 const StatisticLine = ({name, value}) => {
   return (
-    <div>
-      <p>{name} {value}</p>
-    </div>
+    <tr>
+      <td>{name}</td>
+      <td>{value}</td>
+    </tr>
   )
 }
 
