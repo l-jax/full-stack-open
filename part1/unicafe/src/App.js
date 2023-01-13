@@ -5,6 +5,16 @@ const Button = ({ handleClick, text}) => (
 )
 
 const Statistics = ({statistics}) => {
+
+  if(statistics.all == 0){
+    return (
+      <div>
+        <h1>statistics</h1>
+        <p>give feedback to see statistics</p>
+      </div>
+    )
+  }
+
   return (
     <div>
       <h1>statistics</h1>
